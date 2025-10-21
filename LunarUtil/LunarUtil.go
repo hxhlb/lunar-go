@@ -863,7 +863,7 @@ func GetDayJiShen(monthZhiIndex int, dayGanZhi string) *list.List {
 	l := list.New()
 	m := monthZhiIndex - 2
 	if m < 0 {
-		m += 10
+		m += 12
 	}
 
 	pattern := ";" + fmt.Sprintf("%02X", GetJiaZiIndex(dayGanZhi)) + "(.[^;]*)"
@@ -891,7 +891,7 @@ func GetDayXiongSha(monthZhiIndex int, dayGanZhi string) *list.List {
 	l := list.New()
 	m := monthZhiIndex - 2
 	if m < 0 {
-		m += 10
+		m += 12
 	}
 
 	pattern := ";" + fmt.Sprintf("%02X", GetJiaZiIndex(dayGanZhi)) + "(.[^;]*)"
